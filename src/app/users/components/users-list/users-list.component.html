@@ -1,0 +1,13 @@
+<mat-grid-list cols="4" rowHeight="1:1n" class="user-table">
+  <mat-grid-tile *ngFor="let user of users" class="user-card-wrapper">
+    <app-user-card [user]="user" (deleteUser)="deleteUser($event)"></app-user-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+<div class='btn-wrap'>
+  <button mat-raised-button color="accent">
+    <mat-icon>add</mat-icon>
+    Add User</button>
+
+</div>
